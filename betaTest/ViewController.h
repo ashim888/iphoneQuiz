@@ -7,13 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AudioToolbox/AudioToolbox.h>
 @interface ViewController : UIViewController{
 
+  
+    __weak IBOutlet UIImageView *imageView;
+    //ImageView *imageView;
+    
+    SystemSoundID WinSoundId;
+    SystemSoundID LooserSoundId;
+    
+    
+    IBOutlet UILabel *mainScore;
     IBOutlet UILabel *questionLabel;
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *point;
+    
     NSArray *question;
+    NSInteger count;
     NSMutableArray *answer_0;
     NSMutableArray *answer_1;
     NSMutableArray *answer_2;
@@ -45,6 +56,7 @@
     NSMutableArray *answer_20;
     NSMutableArray *answer_21;
     
+    NSString *correctAns;
     
     int indexValue;
     NSMutableArray *tet;
@@ -59,7 +71,8 @@
 -(IBAction)optB;
 -(IBAction)optC;
 -(IBAction)optD;
-
+-(void)gameOver;
+-(void)winner;
 -(void) ansChoice;
 
 @end

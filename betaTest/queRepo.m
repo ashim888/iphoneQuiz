@@ -12,9 +12,11 @@
 
 -(NSString *) questionCollection{
     i =arc4random()%20;
-    
+    int val=[self randIndex];
+    if (i==val) {
+        i=arc4random()%20;
+    }
     questions =@[
-              
                  @"Arctic regions are home to which of these animals?",
                  @"A particularly easy target is said to be a duck that's doing what?",
                  @"How many hours are there in a day?",
@@ -52,7 +54,25 @@
     int randval=i;
     
     answer_one=@[@"Polar bear",
-                @"Sitting", @"24", @"Mark", @"South Australia", @"Australia", @"Balloon",@"Mountain",@"50-cent",@"Elizabeth II",@"Toothpaste",@"Drive",@"Duck",@"Cake",@"Square",@"Gambling",@"Cucumber",@"12",@"Merry-go-round"];
+                 @"Sitting",
+                 @"24",
+                 @"Mark",
+                 @"South Australia",
+                 @"Australia",
+                 @"Balloon",
+                 @"Mountain",
+                 @"50-cent",
+                 @"Elizabeth II",
+                 @"Toothpaste",
+                 @"Drive",
+                 @"Duck",
+                 @"Cake",
+                 @"Molehill",
+                 @"Square",
+                 @"Gambling",
+                 @"Cucumber",
+                 @"12",
+                 @"Merry-go-round"];
     return answer_one[i];
 }
 
